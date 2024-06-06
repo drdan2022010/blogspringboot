@@ -19,4 +19,9 @@ public class PostServiceimpl implements PostService{
 
         return postrepository.save(post);
     }
+
+
+    public List<Post> getAllPost(){
+        return postrepository.findAll();
+    }
 }

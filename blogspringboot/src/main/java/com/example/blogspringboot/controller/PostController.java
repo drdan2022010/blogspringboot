@@ -12,10 +12,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/posts")
+@CrossOrigin(origin ="*")
 public class PostController {
 
     @Autowired
     private PostService postservice;
+
     @PostMapping
     public ResponseEntity<?> createPost(@RequestBody Post post){
         try{
@@ -23,6 +25,16 @@ public class PostController {
             return ResponseEntity.status(HttpStatus.CREATED).body(createPost);
         } catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Post>> getAllPOsts(){
+        try{
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(postservice.getAllPosts())
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVICE_ERROR).build();
         }
     }
 }
