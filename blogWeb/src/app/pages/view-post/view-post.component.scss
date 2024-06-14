@@ -1,0 +1,91 @@
+.card-container {
+  margin: 16px;
+  max-width: 80%;
+  padding-bottom: 30px;
+}
+
+.mat-card {
+  padding: 1000px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.mat-card-footer {
+  margin-left: 20px;
+}
+
+.post-img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+
+.mat-card-title, .mat-card-subtitle {
+  white-space: nowrap;
+}
+
+.mat-card-content {
+  white-space: nowrap;
+}
+
+.mat-chip-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.mat-chip {
+  margin: 5px;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button[mat-raised-button] {
+  margin-right: 5px;
+}
+.mat-card-header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.example-header-image {
+  flex: 0 0 auto;
+}
+
+.title-subtitle {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  margin-left: 60px;
+}
+.comment-card {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comment-card h4 {
+  margin-bottom: 15px;
+}
+
+.comment-card mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.comment-card button {
+  margin-top: 10px;
+}

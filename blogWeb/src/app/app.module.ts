@@ -10,13 +10,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { ViewAllComponent } from './pages/view-all/view-all.component';
+import { ViewPostComponent } from './pages/view-post/view-post.component';
+import {
+  MatAccordion,
+  MatExpansionPanel,
+  MatExpansionPanelDescription,
+  MatExpansionPanelTitle
+} from "@angular/material/expansion";
+import { SearchByNameComponent } from './pages/search-by-name/search-by-name.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatePostComponent,
-    ViewAllComponent
+    ViewAllComponent,
+    ViewPostComponent,
+    SearchByNameComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +36,10 @@ import { ViewAllComponent } from './pages/view-all/view-all.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    MatAccordion,
+    MatExpansionPanel,
+    MatExpansionPanelDescription,
+    MatExpansionPanelTitle,
   ],
   providers: [
     provideClientHydration(),

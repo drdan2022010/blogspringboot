@@ -11,7 +11,7 @@
         </mat-grid-tile>
         <mat-grid-tile colspan="3" rowspan="1">
           <mat-card-content>
-            {{ item.content.length > 600 ? item.content.substr(0, 600) + '...' : item.content }}
+            {{ item.content?.length > 600 ? item.content.substr(0, 600) + '...' : item.content }}
           </mat-card-content>
         </mat-grid-tile>
       </mat-grid-list>
@@ -19,10 +19,9 @@
       <mat-card-actions>
         <button mat-raised-button color="primary">{{ item.likeCount }} <mat-icon>favorite</mat-icon></button>
         <button mat-raised-button color="primary">{{ item.likeCount }} <mat-icon>favorite</mat-icon></button>
-        <button mat-raised-button color="primary" style="margin-left: 5px;">{{ item.viewCount }} 
+        <button mat-raised-button color="primary" style="margin-left: 5px;">{{ item.viewCount }}
           <mat-icon>remove_red_eye</mat-icon></button>
-          <button mat-raised-button color ="primary" style="margin-left: 5px;">View Post</button>
+          <button mat-raised-button color ="primary" style="margin-left: 5px;" routerLink="/view-post/{{item.id}}}">View Post</button>
     </mat-card-actions>
     </mat-card>
   </div>
-  

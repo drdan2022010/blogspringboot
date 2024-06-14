@@ -7,4 +7,8 @@ public interface PostService {
     Post savePost(Post post);
 
     List<Post> getAllPosts();
-}
+    Post getPostById(Long id);
+    public void likePost(Long id);
+    public List<Post> searchByName(String keyword);
+
+    }

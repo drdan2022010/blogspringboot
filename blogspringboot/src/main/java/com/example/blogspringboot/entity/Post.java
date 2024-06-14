@@ -1,10 +1,6 @@
 package com.example.blogspringboot.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -26,5 +22,6 @@ public class Post {
     private int likeCount;
     private int viewCount;
 
+    @ElementCollection
     private List<String> tags;
 }

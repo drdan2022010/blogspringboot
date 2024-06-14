@@ -1,7 +1,7 @@
 import {
   ScrollingModule,
   ViewportRuler
-} from "./chunk-YVGUP7O5.js";
+} from "./chunk-SOULIP4U.js";
 import {
   DataSource,
   _DisposeViewRepeaterStrategy,
@@ -9,18 +9,19 @@ import {
   _VIEW_REPEATER_STRATEGY,
   _ViewRepeaterOperation,
   isDataSource
-} from "./chunk-WYKZCJHR.js";
+} from "./chunk-PQQURMXX.js";
 import {
   Directionality,
   MatCommonModule,
   Platform,
   _isNumberValue
-} from "./chunk-OQP3WRNM.js";
+} from "./chunk-N3M7H5Q3.js";
 import {
   DOCUMENT
-} from "./chunk-Q76CUQJP.js";
+} from "./chunk-U2OAPMY6.js";
 import {
   Attribute,
+  BehaviorSubject,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
@@ -40,13 +41,22 @@ import {
   Optional,
   Output,
   SkipSelf,
+  Subject,
   TemplateRef,
   ViewChild,
   ViewContainerRef,
   ViewEncapsulation$1,
   booleanAttribute,
+  combineLatest,
+  from,
   inject,
+  isObservable,
+  map,
+  merge,
+  of,
   setClassMetadata,
+  take,
+  takeUntil,
   ɵɵInheritDefinitionFeature,
   ɵɵInputTransformsFeature,
   ɵɵNgOnChangesFeature,
@@ -80,19 +90,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-OVEDRTXR.js";
-import {
-  BehaviorSubject,
-  Subject,
-  combineLatest,
-  from,
-  isObservable,
-  map,
-  merge,
-  of,
-  take,
-  takeUntil
-} from "./chunk-VDFOJE7E.js";
+} from "./chunk-SPGXWK6W.js";
 
 // node_modules/@angular/cdk/fesm2022/table.mjs
 var _c0 = [[["caption"]], [["colgroup"], ["col"]], "*"];
