@@ -1,0 +1,53 @@
+.card-container {
+  margin: 16px;
+  max-width: 60%;
+  padding-bottom: 3px;
+  border: 1px solid #ccc; // Add a border box
+  border-radius: 5px; // Round the corners of the border box
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Add a shadow to the box
+}
+
+mat-card {
+  padding: 10px;
+  border-radius: 5px; // Round the corners of the card
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); // Add a shadow to the card
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shibal.jpg');
+  background-size: cover;
+}
+
+mat-card-footer {
+  margin-left: 2px;
+}
+
+.post-img {
+  width: 30px;
+  height: 40px;
+  object-fit: cover;
+  margin-top: 15px;
+}
+
+.search-form {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.emptyf {
+  text-align: center;
+  margin-top: 100px;
+}
+.mat-form-field {
+  color: black; // Change the font color to black
+}
+::ng-deep .mat-input-element {
+  color: black; // Change the input text color to black
+}
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
