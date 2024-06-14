@@ -5,14 +5,13 @@ import com.example.blogspringboot.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/posts")
-@CrossOrigin(origin ="*")
+@CrossOrigin(origins ="*")
 public class PostController {
 
     @Autowired
@@ -32,9 +31,38 @@ public class PostController {
     public ResponseEntity<List<Post>> getAllPOsts(){
         try{
             return ResponseEntity.status(HttpStatus.OK)
-                    .body(postservice.getAllPosts())
+                    .body(postservice.getAllPosts());
         }catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVICE_ERROR).build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Post> getPostById(@PathVariable Long id){
+        try {
+            Post post = postservice.getPostById(id);
+            return ResponseEntity.ok(post);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+    @PutMapping("/{id}/like")
+    public ResponseEntity<?> likePost(@PathVariable Long id){
+        try {
+            postservice.likePost(id);
+            return ResponseEntity.ok(new String[]{"Post liked successfully"});
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        }
+    }
+
+    @GetMapping("/search/{keyword}")
+    public ResponseEntity<List<Post>> searchByName(@PathVariable String keyword){
+        try {
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(postservice.searchByName(keyword));
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
     }
 }

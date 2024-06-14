@@ -14,7 +14,17 @@ export class PostService {
     return this.http.post(`${BASIC_URL}api/posts`, data);
   }
 
- getAllPosts(): Observable<any> {
-    return this.http.get(`BASIC_URLapi/posts`);
+  getAllPosts(): Observable<any> {
+    return this.http.get(`${BASIC_URL}api/posts`);
+  }
+  getPostById(postId:number): Observable<any> {
+    return this.http.get(`${BASIC_URL}api/posts/${postId}`);
+  }
+  likePost(postId:number): Observable<any> {
+    return this.http.put(`${BASIC_URL}api/posts/${postId}/like`, {});
+  }
+
+  searchByName(name:string): Observable<any> {
+    return this.http.get(`${BASIC_URL}api/posts/search/${name}`);
   }
 }
