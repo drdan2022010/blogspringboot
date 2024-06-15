@@ -1,0 +1,5 @@
+<div>
+    <input type="file" (change)="onFileSelected($event)">
+    <input type="text" [(ngModel)]="fileName" placeholder="Enter new file name">
+    <button (click)="uploadFile()">Upload</button>
+</div>
