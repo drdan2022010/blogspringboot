@@ -1,0 +1,96 @@
+.card-container {
+  margin: 1rem; // Converted px to rem for better responsiveness
+  max-width: 80%;
+  padding-bottom: 1.875rem; // Converted px to rem for better responsiveness
+}
+
+.mat-card {
+  padding: 62.5rem; // Converted px to rem for better responsiveness
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.mat-card-footer {
+  margin-left: 1.25rem; // Converted px to rem for better responsiveness
+}
+
+.post-img {
+  width: 100%; // Make the image responsive by setting width to 100%
+  height: auto; // Set height to auto to maintain aspect ratio
+  object-fit: cover;
+  margin-top: 0.9375rem; // Converted px to rem for better responsiveness
+}
+
+.mat-card-title, .mat-card-subtitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; // Use ellipsis for text overflow
+}
+
+.mat-card-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; // Use ellipsis for text overflow
+}
+
+.mat-chip-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.mat-chip {
+  margin: 0.3125rem; // Converted px to rem for better responsiveness
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button[mat-raised-button] {
+  margin-right: 0.3125rem; // Converted px to rem for better responsiveness
+}
+
+.mat-card-header {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.example-header-image {
+  flex: 0 0 auto;
+}
+
+.title-subtitle {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  margin-left: 3.75rem; // Converted px to rem for better responsiveness
+}
+
+.comment-card {
+  margin-top: 1.25rem; // Converted px to rem for better responsiveness
+  padding: 0.9375rem; // Converted px to rem for better responsiveness
+  border-radius: 0.3125rem; // Converted px to rem for better responsiveness
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.comment-card h4 {
+  margin-bottom: 0.9375rem; // Converted px to rem for better responsiveness
+}
+
+.comment-card mat-form-field {
+  width: 100%;
+  margin-bottom: 0.9375rem; // Converted px to rem for better responsiveness
+}
+
+.comment-card button {
+  margin-top: 0.625rem; // Converted px to rem for better responsiveness
+}
