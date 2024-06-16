@@ -18,6 +18,8 @@ import {
   MatExpansionPanelTitle
 } from "@angular/material/expansion";
 import { SearchByNameComponent } from './pages/search-by-name/search-by-name.component';
+import { UploadFileComponent } from './pages/upload-file/upload-file.component';
+import { AllFilesComponent } from './pages/all-files/all-files.component';
 
 
 @NgModule({
@@ -26,7 +28,10 @@ import { SearchByNameComponent } from './pages/search-by-name/search-by-name.com
     CreatePostComponent,
     ViewAllComponent,
     ViewPostComponent,
-    SearchByNameComponent
+    SearchByNameComponent,
+    UploadFileComponent,
+    AllFilesComponent
+
   ],
   imports: [
     BrowserModule,
